@@ -1,0 +1,32 @@
+package hi;
+
+abstract  class calculate2
+{
+	abstract void Calculate1(int num);
+}
+class Square extends calculate
+{
+	void Calculate1(int num)
+	{
+		System.out.println("the square of number is "+num*num);
+	}
+}
+class Cube extends calculate2
+{
+	void Calculate1(int num)
+	{
+		System.out.println("the cube is "+num*num*num);
+	}
+}
+
+
+public class calculate {
+	public static void main(String[] args)
+	{
+		Square s1=new Square();
+		Cube c1=new Cube();
+		c1.Calculate1(3);
+		s1.Calculate1(3);
+	}
+
+}
