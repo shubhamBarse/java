@@ -1,0 +1,45 @@
+
+class domestic
+{
+	private String name ;
+	
+//default constructor
+domestic(){}
+//parameterized constructor
+domestic(String name)
+{
+	this.name=name;
+}
+void setName(String name)
+{
+	this.name=name ;
+}
+String getName()
+{
+	return name ;
+}
+void calcuBill(int unit)
+{
+	System.out.println("the bill of "+getName()+" is "+unit*5);
+}
+}
+class dukan extends domestic
+{
+	@override
+  void calcuBill(int unit)
+	{
+		System.out.println("the bill of "+getName()+" is "+unit*3);
+	}
+}
+public class bill
+{
+	public static void main(String[] args)
+	{
+		domestic d=new domestic();
+		d.setName("shubham");
+		d.calcuBill(10);
+		dukan dd=new dukan();
+		dd.setName("manohar");
+		dd.calcuBill(20);
+	}
+}
